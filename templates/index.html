@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet"  type='text/css' media='screen' href="/static/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS CLASSIFICATION</title>
+</head>
+<body>
+    <div class="container">
+      <div class="title"><marquee><b>BBC NEWS CLASSIFICATION</b></marquee></div>
+      <div class="content">
+        <form action="{{ url_for('predict')}}" method="POST">
+          <center><div class="user-details">
+            <div class="input-box">
+              <span class="details"><b>ENTER YOUR TEXT</b></span>
+              <input type="text" name="news" placeholder="Your Text" required>
+            </div>
+          </div></center>
+          <center><div class="button">
+            <input type="submit" value="Predict"><br><br>
+          </div>
+          <br></center>
+          
 
+          <center><div><b>{{ pred }}</b></div></center>
+        </form>
+      </div>
+    </div>
+    </form>
+  </div>
+  
+
+</body>
+</html>
